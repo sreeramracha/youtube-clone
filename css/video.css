@@ -1,0 +1,136 @@
+.thumbnail{
+    width: 100%;
+    /* height: 300px;
+    object-fit:cover;
+    object-position: right;
+    object-fit: contain;
+    border: 2px solid red;
+    object-position: bottom; */
+}
+
+.video-title{
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.video-info-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.profile-picture{
+    width: 35px;
+    border-radius: 50px;
+}
+
+.thumbnail-row{
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.video-author, .video-stats{
+    font-size: 12px;
+    color:rgb(96, 96, 96);
+}
+
+.video-author{
+    margin-bottom: 4px;
+}
+
+.video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+@media (min-width: 10px) and (max-width: 510px) { 
+    .video-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 511px) and (max-width: 888px) {
+    .video-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* 
+@media (min-width: 751px) and (max-width: 999px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+} */
+
+@media (min-width: 888px){
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1140px) {
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+.video-time{
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom:10px;
+    right: 5px;
+    font-family: Roboto, Arial;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 2px;
+}
+
+
+.pp .description{
+    width: 265px;
+    display: grid;
+    grid-template-columns: 90px 1fr ;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
+    position: absolute;
+    z-index: -1;
+    top: 50px;
+    opacity: 0;
+    transition: opacity 0.15s;
+}
+
+.description .dp{
+    margin: 10px;
+    border-radius: 50px;
+}
+
+.description h3{
+    font-family: Roboto , Arial;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.description h5{
+    font-family: Roboto , Arial;
+    color: rgb(65, 65, 65);
+    font-weight:400;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.pp{
+    position: relative;
+    cursor: pointer;
+}
+
+.pp:hover .description{
+    opacity: 1;
+    z-index: 1;
+}
